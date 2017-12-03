@@ -1,0 +1,235 @@
+
+<div>-------------------------------------------test--------------------------------------------------------------------------------------</div>
+
+
+
+<input type="number" name="attr_silaMod" value="@{sila}/2" disabled="true" />
+<label>Zywotnosc <input type="number" name="attr_zywotnoscmax" value="@{wytrzymalosc}*5 + 20" disabled="true" /></label>
+<label>Obrona Dystansowa <input type="number" name="attr_obrdysmax" value="@{zrecznosc}*3 + @{unikipip}" disabled="true" /></label>
+<label>Obrona Walka Wrecz <input type="number" name="attr_obrwwmax" value="@{sila}*3 + @{walkawreczpip}" disabled="true" /></label>
+<label>Obrona Bojka <input type="number" name="attr_obrbmax" value="@{sila}*3 + @{bojkapip}" disabled="true" /></label>
+<div>-------------------------------------------test---nowy poczatek-----------------------------------------------------------------------------------</div>
+
+
+<div class='sheet-7colrow'>
+    <div class='sheet-col'>
+            <label>Imie:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_name"/></label>
+            <label>Plec:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_gender"/></label>
+            <label>Wiek:<input  class="sheet-smalltext sheet-shorttext" type="text" name="attr_age"/></label>
+            <label>Wzrost:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_height"/></label>
+            <label>Waga:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_weight"/></label>
+            <label>Rasa:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_gender"/></label>
+            <label>Profesja:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_gender"/></label>
+    </div>
+    <div class='sheet-col'>
+        <button type='roll' class="astext" value='/roll (@{spryt} - 1)d6 + 1d6! + @{dopalaczpozpip}d6 + @{czujnoscpip}' >Inicjatywa</button>
+        <label>Dopalacz Poz <input type="number" name="attr_dopalaczpozpip" class="sheet-smallnumber" min="0" max="6" value="0"/></label>
+        <label>Sila Woli: stala <input type="number" name="attr_swstala" class="sheet-smallnumber"  min="0" max="10" value="0"/>tymczasowa <input type="number" name="attr_swzmiennapip" class="sheet-smallnumber" min="0" max="6" value="0"/></label>
+    </div>
+    <div class='sheet-col'>
+        <!-- Third column -->
+    </div>
+</div>
+
+<div><label>ATRYBUTY</label></div>
+
+<div class='sheet-7colrow'>
+    <div class='sheet-col'>
+        <label>Fizyczne</label>
+            <button type='roll' class="astext" value='/roll (@{sila} - 1)d6 + 1d6! + @{silapip}' >Sila</button>
+                <input type="number" name="attr_sila" class="sheet-smallnumber" min="1" max="6"/>D
+                +<input type="number" name="attr_silapip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_silaspec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{zrecznosc} - 1)d6 + 1d6! + @{zrecznoscpip}' >Zrecznosc</button>
+                <input type="number" name="attr_zrecznosc" class="sheet-smallnumber" min="1" max="6"/>D 
+                +<input type="number" name="attr_zrecznoscpip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_zrecznoscspec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{wytrzymalosc} - 1)d6 + 1d6! + @{wytrzymaloscpip}' >Wytrzymalosc</button>
+                <input type="number" name="attr_wytrzymalosc" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_wytrzymaloscpip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_wytrzymaloscspec"/></label></div>
+    </div>
+    <div class='sheet-col'>
+        <label>Spoleczne</label>
+            <button type='roll' class="astext" value='/roll (@{charyzma} - 1)d6 + 1d6! + @{charyzmapip}' >Charyzma</button>
+                <input type="number" name="attr_charyzma" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_charyzmapip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_charyzmascharyzmapec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{oddzialywanie} - 1)d6 + 1d6! + @{oddzialywaniepip}' >Oddzialywanie</button>
+                <input type="number" name="attr_oddzialywanie" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_oddzialywaniepip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_oddzialywaniespec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{wyglad} - 1)d6 + 1d6! + @{wygladpip}' >Wyglad</button>
+                <input type="number" name="attr_wyglad" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_wygladpip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_wygladspec"/></label></div>
+    </div>
+    <div class='sheet-col'>
+        <label>Umyslowe</label>
+            <button type='roll' class="astext" value='/roll (@{percepcja} - 1)d6 + 1d6! + @{percepcjapip}' >Percepcja</button>
+                <input type="number" name="attr_percepcja" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_percepcjapip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_percepcjaspec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{inteligencja} - 1)d6 + 1d6! + @{inteligencjapip}' >Inteligencja</button>
+                <input type="number" name="attr_inteligencja" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_inteligencjapip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_inteligencjaspec"/></label></div>
+            <button type='roll' class="astext" value='/roll (@{spryt} - 1)d6 + 1d6! + @{sprytpip}' >Spryt</button>
+                <input type="number" name="attr_spryt" class="sheet-smallnumber"  min="1" max="6"/>D 
+                +<input type="number" name="attr_sprytpip" class="sheet-smallnumber" min="0" max="6" value="0"/>
+                <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_sprytspec"/></label></div>
+    </div>
+</div>
+
+<div><label>ZDOLNOSCI</label></div>
+
+<div class='sheet-14colrow'>
+    <div class='sheet-col'>
+        <label>Talenty</label>
+                    <label>Autorytet
+                        <input type="number" name="attr_autorytetpip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_autorytet"/></div>
+                            </label>
+                    <label>Bojka
+                        <input type="number" name="attr_bojkapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_bojka"/></div>
+                            </label>
+                    <label>Cwaniactwo
+                        <input type="number" name="attr_cwaniactwopip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_cwaniactwo"/></div>
+                            </label>
+                    <label>Czujnosc
+                        <input type="number" name="attr_czujnoscpip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_czujnosc"/></div>
+                            </label>
+                    <label>Ekspresja
+                        <input type="number" name="attr_ekspresjapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_ekspresja"/></div>
+                            </label>
+                    <label>Empatia
+                        <input type="number" name="attr_empatiapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_empatia"/></div>
+                            </label>
+                    <label>Przebieglosc
+                        <input type="number" name="attr_przebiegloscpip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_przebieglosc"/></div>
+                            </label>
+                    <label>Uniki
+                        <input type="number" name="attr_unikipip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_uniki"/></div>
+                            </label>
+                    <label>Wysportowanie
+                        <input type="number" name="attr_wysportowaniepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_wysportowanie"/></div>
+                            </label>
+                    <label>Zastraszanie
+                        <input type="number" name="attr_zastraszaniepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_zastraszanie"/></div>
+                            </label>
+    </div>
+    <div class='sheet-col'>
+        <label>Umiejetnosci</label>
+                    <label>Bron Palna
+                        <input type="number" name="attr_bronpalnapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_bronpalna"/></div>
+                            </label>
+                    <label>Bron Pokladowa
+                        <input type="number" name="attr_bronpokladowapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_bronpokladowa"/></div>
+                            </label>
+                    <label>Etykieta
+                        <input type="number" name="attr_etykietapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_etykieta"/></div>
+                            </label>
+                    <label>Krycie sie
+                        <input type="number" name="attr_kryciesiepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_kryciesie"/></div>
+                            </label>
+                    <label>Naprawa
+                        <input type="number" name="attr_naprawapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_naprawa"/></div>
+                            </label>
+                    <label>Prow poj - naziemne
+                        <input type="number" name="attr_ppnaziemnepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_ppnaziemne"/></div>
+                            </label>
+                    <label>Pilotaz - atmosferyczne
+                        <input type="number" name="attr_patmosferycznepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_patmosferyczne"/></div>
+                            </label>
+                    <label>Pilotaz - kosmiczne
+                        <input type="number" name="attr_pkosmicznepip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_pkosmiczne"/></div>
+                            </label>
+                    <label>Technika
+                        <input type="number" name="attr_technikapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_technika"/></div>
+                            </label>
+                    <label>Sztuka przetrwania
+                        <input type="number" name="attr_sztukaprzetrwaniapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_sztukaprzetrwania"/></div>
+                            </label>
+                    <label>Walka wrecz
+                        <input type="number" name="attr_walkawreczpip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_walkawrecz"/></div>
+                            </label>
+    </div>
+    <div class='sheet-col'>
+        <label>Wiedza</label>
+                    <label>Elektronika
+                        <input type="number" name="attr_elektronikapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_elektronika"/></div>
+                            </label>
+                    <label>Inzynieria
+                        <input type="number" name="attr_inzynieriacpip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_inzynieria"/></div>
+                            </label>
+                    <label>Komputery
+                        <input type="number" name="attr_komputerypip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_komputery"/></div>
+                        </label>
+                    <label>lingwistyka
+                        <input type="number" name="attr_lingwistykapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_lingwistyka"/></div>
+                            </label>
+                    <label>medycyna
+                        <input type="number" name="attr_medycynapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_medycyna"/></div>
+                            </label>
+                    <label>Nauka
+                        <input type="number" name="attr_naukapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_nauka"/></div>
+                            </label>
+                    <label>Zagadki
+                        <input type="number" name="attr_zagadkipip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_zagadki"/></div>
+                            </label>
+                    <label>Poliyka
+                        <input type="number" name="attr_politykapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_polityka"/></div>
+                            </label>
+                    <label>Prawo
+                        <input type="number" name="attr_prawopip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_prawo"/></div>
+                            </label>
+                    <label>Sledztwo
+                        <input type="number" name="attr_sledztwopip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_sledztwo"/></div>
+                            </label>
+                    <label>Biotechnika
+                        <input type="number" name="attr_biotechnikapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_biotechnika"/></div>
+                            </label>
+                    <label>Cybertechnologia
+                        <input type="number" name="attr_cybertechnologiapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_cybertechnologia"/></div>
+                            </label>
+                    <label>Mechanika
+                        <input type="number" name="attr_mechanikapip" class="sheet-smallnumber" min="0" max="15" value="0"/>
+                        <div><input class="sheet-smalltext sheet-shorttext" type="text" name="attr_mechanika"/></div>
+                            </label>
+    </div>
+</div>
+<div>-------------------------------------------test--------------------------------------------------------------------------------------</div>
+
+
